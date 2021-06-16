@@ -1,11 +1,11 @@
-@extends('layouts.admin') 
+@extends('layouts.admin')
 
 @section('content')
   <!-- Begin Page Content -->
   <div class="container-fluid">
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Tambah Gallery</h1>
+      <h1 class="h3 mb-0 text-gray-800">Tambah Gallery</h1>
     </div>
 
     @if ($errors->any())
@@ -27,9 +27,9 @@
             <select name="travel_packages_id" required class="form-control">
               <option value="">Pilih Paket Travel</option>
               @foreach ($travel_packages as $travel_package)
-                  <option value="{{ $travel_package->id }}">
-                    {{ $travel_package->title }}
-                  </option>
+                <option value="{{ $travel_package->id }}">
+                  {{ $travel_package->title }}
+                </option>
               @endforeach
             </select>
           </div>
