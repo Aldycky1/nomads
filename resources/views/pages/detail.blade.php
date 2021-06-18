@@ -100,14 +100,15 @@
             </div>
             <div class="join-container">
               @auth
-                <form action="" method="POST">
+                <form action="{{ route('checkout_process', $item->id) }}" method="POST">
+                  @csrf
                   <button class="btn btn-block btn-join-now mt-3 py-2" type="submit">
                     Join Now
                   </button>
                 </form>
               @endauth
               @guest
-                <a href="{{ route('checkout') }}" class="btn btn-block btn-join-now mt-3 py-2">
+                <a href="{{ route('login') }}" class="btn btn-block btn-join-now mt-3 py-2">
                   Login or Register to Join
                 </a>
               @endguest
