@@ -96,7 +96,7 @@ class GalleryController extends Controller
   {
     $data = $request->all();
     $data['image'] = $request->file('image')->store(
-      'asset/gallery',
+      'assets/gallery',
       'public'
     );
 
