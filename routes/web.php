@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\DetailController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MidtransController;
 use App\Models\TravelPackage;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -60,3 +61,9 @@ Route::prefix('admin')
     });
 
 Auth::routes(['verify' => true]);
+
+// Midtrans
+Route::post('/midtrans/callback', [MidtransController::class, 'notificationHandler']);
+Route::get('/midtrans/finish', [MidtransController::class, 'finishRedirect']);
+Route::get('/midtrans/unfinish', [MidtransController::class, 'unfinishRedirect']);
+Route::get('/midtrans/error', [MidtransController::class, 'errorRedirect']);
