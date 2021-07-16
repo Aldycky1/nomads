@@ -131,12 +131,18 @@ header .btn-get-started:hover {
   color: #fff;
 }
 
-.section-popular-content .section-popular-travel .travel-button .btn-travel-details {
+.section-popular-content
+  .section-popular-travel
+  .travel-button
+  .btn-travel-details {
   background-color: #ff9e53;
   color: #fff;
 }
 
-.section-popular-content .section-popular-travel .travel-button .btn-travel-details:hover {
+.section-popular-content
+  .section-popular-travel
+  .travel-button
+  .btn-travel-details:hover {
   background-color: #ffae6f;
   color: #fff;
 }
@@ -163,7 +169,13 @@ header .btn-get-started:hover {
 }
 
 .section-testimonial-heading {
-  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f7f9ff));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#fff),
+    to(#f7f9ff)
+  );
   background: linear-gradient(#fff 0%, #f7f9ff 100%);
   padding-top: 50px;
   min-height: 506px;
@@ -404,14 +416,14 @@ header .btn-get-started:hover {
 .section-details-content .gallery .xzoom-container .xzoom {
   width: 100%;
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
   margin-bottom: 10px;
 }
 
 .section-details-content .gallery .xzoom-container .xactive {
   border: 4px solid #1abc9c;
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 .section-details-content .members .member-image {
@@ -459,5 +471,50 @@ header .btn-get-started:hover {
 .section-success .btn-home-page:hover {
   background-color: #2a488e;
   color: #fff;
+}
+
+@media (min-width: 992px) {
+  .login-container {
+    background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      color-stop(60%, #ffffff),
+      color-stop(40%, #e4e6eb)
+    );
+    background: linear-gradient(90deg, #ffffff 60%, #e4e6eb 40%);
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+.page-login {
+  height: 100vh;
+}
+
+.page-login .btn-login {
+  background-color: #ff9e53;
+  color: #fff;
+}
+
+.page-login .btn-login:hover {
+  color: #fff;
+}
+
+.page-login .section-left h1 {
+  font-family: "Playfair Display";
+  font-weight: bold;
+  font-size: 50px;
+  text-align: left;
+  color: #071c4d;
+}
+
+.page-login .section-right a {
+  font-family: Assistant;
+  font-weight: 300;
+  text-decoration: underline;
+  font-size: 16px;
+  text-align: center;
+  color: #bfbfbf;
 }
 /*# sourceMappingURL=main.css.map */

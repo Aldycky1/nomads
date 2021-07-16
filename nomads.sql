@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jul 10, 2021 at 03:33 AM
+-- Generation Time: Jul 11, 2021 at 10:14 AM
 -- Server version: 5.7.24
 -- PHP Version: 7.4.19
 
@@ -57,15 +57,10 @@ CREATE TABLE `galleries` (
 --
 
 INSERT INTO `galleries` (`id`, `travel_packages_id`, `image`, `deleted_at`, `created_at`, `updated_at`) VALUES
-(1, 2, 'assets/gallery/ytQAF9f22oi2ApSVNZe78XYHqA9gA28joggycjLU.jpg', '2021-07-08 18:20:04', '2021-06-13 20:33:13', '2021-07-08 18:20:04'),
-(2, 1, 'asset/gallery/pmdOerCv6LFwAFoKLIiuryqdurwfs0ggbsy7fAoB.jpg', '2021-07-08 18:20:10', '2021-06-13 20:34:30', '2021-07-08 18:20:10'),
-(3, 3, 'assets/gallery/CgvK590KC28CLqn8cY6deYZl6hJezZHAbIMq5bT0.jpg', '2021-07-08 18:20:20', '2021-06-15 22:04:56', '2021-07-08 18:20:20'),
-(4, 4, 'assets/gallery/0QAlA7EPE4GNoWBKDYajZrSttL5MjMaI6aEMjQE1.jpg', '2021-07-08 18:20:34', '2021-06-15 22:05:11', '2021-07-08 18:20:34'),
-(5, 1, 'assets/gallery/nC9L5ufoJ8BhNo66IWiFfnuiCN9YDkZZsmHXLEdS.jpg', NULL, '2021-07-08 18:20:54', '2021-07-08 18:20:54'),
-(6, 2, 'assets/gallery/ah0UKkuxD7cXwTooBB1rN9YjMpbj55n32fR7GZJN.jpg', NULL, '2021-07-08 18:21:13', '2021-07-08 18:21:13'),
-(7, 3, 'assets/gallery/hbW9rrMSsAYkwWef4QFt3aNWdTTGVrZCigPwhqu9.jpg', NULL, '2021-07-08 18:22:19', '2021-07-08 18:22:19'),
-(8, 4, 'assets/gallery/fJHv6EhNs8jX2qzScTmJ5JmPAbi4aM6Z3WB468RQ.jpg', NULL, '2021-07-08 18:22:45', '2021-07-08 18:22:45'),
-(9, 3, 'assets/gallery/nRVmlGTQ7aI7DIF6fgHxmMTktDmkhiV9N6fj9APz.jpg', NULL, '2021-07-08 18:36:38', '2021-07-08 18:36:38');
+(1, 1, 'assets/gallery/ixyyZsauWfQDMLHyxriebvkg3fDdZfUSWj7zEcP2.jpg', NULL, '2021-07-11 02:14:24', '2021-07-11 02:14:24'),
+(2, 2, 'assets/gallery/zoTLHdL7nQIh4ZtGJz8kSUNhQIpfQocbjAmtN88r.jpg', NULL, '2021-07-11 02:14:42', '2021-07-11 02:14:42'),
+(3, 3, 'assets/gallery/6qRwZBENToeXYgqO23cVq4u0rIHkgXPKZPntOqvS.jpg', NULL, '2021-07-11 02:14:52', '2021-07-11 02:14:52'),
+(4, 4, 'assets/gallery/W312AFYOl8MUV3Dx7kZ95GjobXeVMlaMCDEJdfTa.jpg', NULL, '2021-07-11 02:15:04', '2021-07-11 02:15:04');
 
 -- --------------------------------------------------------
 
@@ -129,15 +124,9 @@ CREATE TABLE `transactions` (
 --
 
 INSERT INTO `transactions` (`id`, `travel_packages_id`, `users_id`, `additional_visa`, `transaction_total`, `transaction_status`, `deleted_at`, `created_at`, `updated_at`) VALUES
-(1, 1, 2, 180, 300, 'SUCCESS', NULL, '2021-06-13 22:20:25', '2021-06-15 21:22:37'),
-(2, 1, 2, 0, 200, 'IN_CART', NULL, '2021-06-18 05:43:47', '2021-06-18 05:43:47'),
-(3, 1, 2, 0, 200, 'IN_CART', NULL, '2021-06-18 08:04:20', '2021-06-18 08:04:20'),
-(4, 2, 2, 0, 100, 'IN_CART', NULL, '2021-06-18 08:12:33', '2021-06-18 08:12:33'),
-(5, 1, 2, 0, 200, 'PENDING', NULL, '2021-06-18 08:25:43', '2021-06-18 09:10:42'),
-(6, 1, 2, 0, 200, 'IN_CART', NULL, '2021-06-18 09:15:41', '2021-06-18 09:15:41'),
-(7, 1, 2, 190, 590, 'PENDING', NULL, '2021-06-18 09:15:47', '2021-06-18 09:16:06'),
-(8, 1, 2, 190, 590, 'PENDING', NULL, '2021-07-08 17:40:03', '2021-07-08 17:43:03'),
-(9, 3, 2, 190, 790, 'PENDING', NULL, '2021-07-08 18:23:36', '2021-07-08 18:24:02');
+(1, 1, 2, 0, 200, 'PENDING', NULL, '2021-07-11 02:20:03', '2021-07-11 02:20:05'),
+(2, 3, 2, 0, 300, 'PENDING', NULL, '2021-07-11 02:31:51', '2021-07-11 02:31:54'),
+(3, 2, 2, 0, 100, 'PENDING', NULL, '2021-07-11 03:11:22', '2021-07-11 03:11:25');
 
 -- --------------------------------------------------------
 
@@ -162,20 +151,9 @@ CREATE TABLE `transaction_details` (
 --
 
 INSERT INTO `transaction_details` (`id`, `transactions_id`, `username`, `nationality`, `is_visa`, `doe_passport`, `deleted_at`, `created_at`, `updated_at`) VALUES
-(1, 1, 'dowan', 'ID', 1, '2021-07-01', NULL, '2021-06-14 02:00:00', '2021-06-14 02:00:00'),
-(2, 1, 'roweuser', 'CN', 1, '2021-07-30', NULL, '2021-06-14 04:00:00', '2021-06-14 04:00:00'),
-(3, 2, 'dowan', 'ID', 0, '2026-06-18', NULL, '2021-06-18 05:43:47', '2021-06-18 05:43:47'),
-(4, 3, 'dowan', 'ID', 0, '2026-06-18', NULL, '2021-06-18 08:04:20', '2021-06-18 08:04:20'),
-(5, 4, 'dowan', 'ID', 0, '2026-06-18', NULL, '2021-06-18 08:12:33', '2021-06-18 08:12:33'),
-(6, 5, 'dowan', 'ID', 0, '2026-06-18', NULL, '2021-06-18 08:25:44', '2021-06-18 08:25:44'),
-(7, 5, 'roweuser', 'CN', 1, '2021-07-10', '2021-06-18 09:08:36', '2021-06-18 09:06:31', '2021-06-18 09:08:36'),
-(8, 6, 'dowan', 'ID', 0, '2026-06-18', NULL, '2021-06-18 09:15:41', '2021-06-18 09:15:41'),
-(9, 7, 'dowan', 'ID', 0, '2026-06-18', NULL, '2021-06-18 09:15:47', '2021-06-18 09:15:47'),
-(10, 7, 'roweuser', 'CN', 1, '2021-07-20', NULL, '2021-06-18 09:16:04', '2021-06-18 09:16:04'),
-(11, 8, 'dowan', 'ID', 0, '2026-07-09', NULL, '2021-07-08 17:40:03', '2021-07-08 17:40:03'),
-(12, 8, 'roweuser', 'CN', 1, '2021-07-17', NULL, '2021-07-08 17:42:41', '2021-07-08 17:42:41'),
-(13, 9, 'dowan', 'ID', 0, '2026-07-09', NULL, '2021-07-08 18:23:36', '2021-07-08 18:23:36'),
-(14, 9, 'roweuser', 'CN', 1, '2021-07-16', NULL, '2021-07-08 18:23:59', '2021-07-08 18:23:59');
+(1, 1, 'dowan', 'ID', 0, '2026-07-11', NULL, '2021-07-11 02:20:03', '2021-07-11 02:20:03'),
+(2, 2, 'dowan', 'ID', 0, '2026-07-11', NULL, '2021-07-11 02:31:51', '2021-07-11 02:31:51'),
+(3, 3, 'dowan', 'ID', 0, '2026-07-11', NULL, '2021-07-11 03:11:22', '2021-07-11 03:11:22');
 
 -- --------------------------------------------------------
 
@@ -308,7 +286,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `galleries`
 --
 ALTER TABLE `galleries`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -320,13 +298,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `transactions`
 --
 ALTER TABLE `transactions`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `transaction_details`
 --
 ALTER TABLE `transaction_details`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `travel_packages`
